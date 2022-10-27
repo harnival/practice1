@@ -66,11 +66,19 @@
             margin-left: 10px;
         }
 
-        .outer:focus-within .inner:first-child {
-            display: none;
+        @keyframes widthchange {
+            from {
+                transform: none;
+            }
+            to {
+                width: 0;
+                padding: 0;
+                margin: 0;
+            }
         }
-        .inner:last-child {
-            transition: all 5s linear;
+        .outer:focus-within .inner:first-child {
+            opacity: 0;
+            animation: widthchange 1s ease-in-out forwards;
         }
 
     </style>
