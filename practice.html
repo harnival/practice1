@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="kr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="clone/css/reset.css" />
+    <style>
+        .outer {
+            background-color: wheat;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100px;
+            box-sizing: border-box;
+            padding: 0px 5px;
+        }
+        .inner {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 5px 10px;
+        }
+        
+        .inner:first-child {
+            width: 60px;
+            background-color: yellow;
+            margin-right: 10px;
+        }
+        .inner:first-child svg {
+            height: 30px;
+            width: 30px;
+        }
+
+        .inner:last-child {
+            width: 100%;
+            background-color: tomato;
+            border: 1px solid black;
+            border-radius: 20px;
+        }
+        .inner:last-child input {
+            width: 100%;
+            border: none;
+            background-color: tomato;
+            margin: 0px 10px;
+            outline: none;
+        }
+        .inner:last-child >svg {
+            min-height: 30px;
+            min-width: 30px;
+            max-width: 30px;
+            max-height: 30px;
+        }
+        .inner:last-child button {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 25px;
+            width: 25px;
+            padding: 3px;
+            border-radius: 50%;
+            border: none;
+            box-sizing: border-box;
+            margin-left: 10px;
+        }
+
+        .outer:focus-within .inner:first-child {
+            display: none;
+        }
+        .inner:last-child {
+            transition: all 5s linear;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <form class="outer">
+        <div class="inner">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
+                <path fill-rule="evenodd" d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25zm-.53 14.03a.75.75 0 001.06 0l3-3a.75.75 0 10-1.06-1.06l-1.72 1.72V8.25a.75.75 0 00-1.5 0v5.69l-1.72-1.72a.75.75 0 00-1.06 1.06l3 3z" clip-rule="evenodd" />
+            </svg>              
+        </div>
+
+        <div class="inner">
+            <input type="text" placeholder="Write Message." />
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
+                <path fill-rule="evenodd" d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25zm-2.625 6c-.54 0-.828.419-.936.634a1.96 1.96 0 00-.189.866c0 .298.059.605.189.866.108.215.395.634.936.634.54 0 .828-.419.936-.634.13-.26.189-.568.189-.866 0-.298-.059-.605-.189-.866-.108-.215-.395-.634-.936-.634zm4.314.634c.108-.215.395-.634.936-.634.54 0 .828.419.936.634.13.26.189.568.189.866 0 .298-.059.605-.189.866-.108.215-.395.634-.936.634-.54 0-.828-.419-.936-.634a1.96 1.96 0 01-.189-.866c0-.298.059-.605.189-.866zm2.023 6.828a.75.75 0 10-1.06-1.06 3.75 3.75 0 01-5.304 0 .75.75 0 00-1.06 1.06 5.25 5.25 0 007.424 0z" clip-rule="evenodd" />
+            </svg>
+            <button>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
+                    <path d="M3.478 2.405a.75.75 0 00-.926.94l2.432 7.905H13.5a.75.75 0 010 1.5H4.984l-2.432 7.905a.75.75 0 00.926.94 60.519 60.519 0 0018.445-8.986.75.75 0 000-1.218A60.517 60.517 0 003.478 2.405z" />
+                </svg>
+            </button>
+        </div>
+    </form>
+    
+</body>
+</html>
